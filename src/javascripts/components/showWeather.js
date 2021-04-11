@@ -7,7 +7,7 @@ const showWeather = (weatherObject) => {
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">${weatherObject.weather[0].description}</li>
-      <li class="list-group-item">${Math.round((((weatherObject.main.temp - 273.15) * 1.8) + 32))} °F</li>
+      <li class="list-group-item">Temperature: ${Math.round((((weatherObject.main.temp - 273.15) * 1.8) + 32))} °F</li>
     </ul>
   </div>
   `;
