@@ -1,2 +1,21 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+$color-1: #2d3142;
+$color-2: #edf2f4;
+
+body {
+  background-color: $color-1;
+  color: $color-2;
+}
+
+.jumbotron {
+  background-color: $color-1;
+}
+
+.card {
+  background-color: $color-1;
+  .list-group-item {
+    background-color: $color-1;
+  }
+}

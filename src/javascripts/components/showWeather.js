@@ -6,13 +6,9 @@ const showWeather = (weatherObject) => {
       <h5 class="card-title">${weatherObject.name}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Temperature: ${weatherObject.main.temp}</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">${weatherObject.weather[0].description}</li>
+      <li class="list-group-item">${Math.round((((weatherObject.main.temp - 273.15) * 1.8) + 32))} °F</li>
     </ul>
-    <div class="card-body">
-      <a href="#" class="Untrack">Card link</a>
-    </div>
   </div>
   `;
 };

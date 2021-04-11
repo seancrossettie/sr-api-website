@@ -13,7 +13,7 @@ const domBuilder = () => {
         <button type="button" class="btn btn-primary" id="weather-location-submit">Submit</button>
       </div>
     </div>
-    <div id="weather-cards"></div>
+    <div class="container d-flex flex-wrap" id="weather-cards"></div>
   `;
 };
 
