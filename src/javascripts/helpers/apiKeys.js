@@ -6,6 +6,7 @@ const firebaseConfig = {
   storageBucket: process.env.APP_STORAGE_BUCKET,
   appId: process.env.APP_APP_ID,
   measurementId: process.env.APP_MEASUREMENT_ID,
+  weatherApiKey: process.env.WEATHER_API_KEY,
 };
 
 export default firebaseConfig;
