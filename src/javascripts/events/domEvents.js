@@ -1,3 +1,4 @@
+import showWeather from '../components/showWeather';
 import weatherCall from '../helpers/data/weatherCall';
 
 const domEvents = () => {
@@ -5,8 +6,12 @@ const domEvents = () => {
     if (e.target.id.includes('weather-location-submit')) {
       e.preventDefault();
       const weatherLocation = document.querySelector('#weather-location-input').value;
-      weatherCall(weatherLocation)
-        .then((weather) => console.warn(weather));
+      if (weatherLocation) {
+        weatherCall(weatherLocation)
+          .then((weather) => showWeather(weather));
+      } else {
+        e.preventDefault();
+      }
     }
   });
 };
