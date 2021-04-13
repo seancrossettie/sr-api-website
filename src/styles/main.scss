@@ -1,8 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-$color-1: #2d3142;
-$color-2: #edf2f4;
+$color-1: #FAFAFF;
+$color-2: #48484A;
+
 
 body {
   background-color: $color-1;
@@ -15,7 +16,8 @@ body {
 
 .card {
   background-color: $color-1;
-  .list-group-item {
-    background-color: $color-1;
-  }
+  border-color: $color-2;
+    .list-group-item {
+      @extend .card
+    }
 }
