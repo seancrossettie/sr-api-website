@@ -16,8 +16,7 @@ const domEvents = () => {
         weatherCall(weatherLocation)
           .then((weather) => showWeather(weather));
         newFirebaseWeatherObj(firebaseWeatherObj);
-      } else {
-        e.preventDefault();
+        document.querySelector('#weather-location-input').value = '';
       }
     }
   });
