@@ -6,7 +6,6 @@ import { newFirebaseWeatherObj, weatherCall } from '../helpers/data/weatherCall'
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('weather-location-submit')) {
-      e.preventDefault();
       const weatherLocation = document.querySelector('#weather-location-input').value;
       const firebaseWeatherObj = {
         location: document.querySelector('#weather-location-input').value,

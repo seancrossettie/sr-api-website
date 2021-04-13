@@ -1,5 +1,7 @@
 import axios from 'axios';
+import showWeather from '../../components/showWeather';
 import firebaseConfig from '../apiKeys';
+// import { showAllWeather } from '../../components/showWeather';
 
 // MAKES CALL TO WEATHER DATABASE
 const weatherCall = (location) => new Promise((resolve, reject) => {
@@ -36,4 +38,18 @@ const getWeather = (uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export { weatherCall, newFirebaseWeatherObj, getWeather };
+const allWeatherFromApi = (array) => new Promise((resolve, reject) => {
+  array.forEach((item) => {
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${item.location}&appid=${firebaseConfig.weatherApiKey}`)
+      .then((response) => showWeather(response.data))
+      .catch((error) => reject(error));
+  });
+});
+
+const getAllWeatherCall = (uid) => {
+  getWeather(uid).then((weatherArray) => allWeatherFromApi(weatherArray));
+};
+
+export {
+  weatherCall, newFirebaseWeatherObj, getWeather, getAllWeatherCall
+};
