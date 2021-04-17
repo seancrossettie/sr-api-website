@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getJokes = () => new Promise((resolve, reject) => {
-  axios.get('https://official-joke-api.appspot.com/random_joke')
+  axios.get('https://official-joke-api.appspot.com/jokes/random')
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });

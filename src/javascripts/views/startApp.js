@@ -1,5 +1,4 @@
 import domBuilder from '../components/domBuilder';
-import weatherForm from '../components/forms/weatherForm';
 import logoutButton from '../components/logoutButton';
 import navbar from '../components/navBar';
 import domEvents from '../events/domEvents';
@@ -11,7 +10,6 @@ const startApp = () => {
   domBuilder();
   navbar();
   navEvents();
-  weatherForm();
   domEvents();
   // getAllWeatherCall(user.uid);
 };

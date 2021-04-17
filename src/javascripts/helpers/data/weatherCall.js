@@ -1,5 +1,5 @@
 import axios from 'axios';
-import showWeather from '../../components/showWeather';
+import showWeather from '../../components/cards/showWeather';
 import firebaseConfig from '../apiKeys';
 // import { showAllWeather } from '../../components/showWeather';
 
