@@ -6,7 +6,7 @@ const jokeForm = () => {
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Get a Random Joke</h1>
-        <button type="button" class="btn btn-primary" id="joke-submit">Submit</button>
+        <button type="button" class="btn btn-primary" id="random-joke-submit">Submit</button>
       </div>
     </div>
   `;
